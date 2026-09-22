@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper and the accompanying repository."
+title: "A Phase Transition on the Third Subset Diagonal of the Avoid-or-Compress Lemma"
+type: software
+authors:
+  - family-names: Yonezu
+    given-names: Ryutaro
+version: 1.0.0
+date-released: 2026-09-22
