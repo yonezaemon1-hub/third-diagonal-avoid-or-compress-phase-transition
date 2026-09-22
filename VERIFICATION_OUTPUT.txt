@@ -1,0 +1,15 @@
+{
+  "r_range": [
+    1,
+    30
+  ],
+  "L_range": [
+    5,
+    60
+  ],
+  "cases": 1680,
+  "failures": 0,
+  "all_pass": true,
+  "max_n": 90,
+  "max_subset_states_seen": 67
+}
