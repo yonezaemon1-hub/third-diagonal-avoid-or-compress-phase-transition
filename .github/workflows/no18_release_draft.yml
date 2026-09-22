@@ -1,0 +1,49 @@
+name: Prepare No.18 v1.0.0 draft release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/NO18_CREATE_DRAFT"
+
+permissions:
+  contents: write
+
+jobs:
+  prepare-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact release-candidate commit
+        uses: actions/checkout@v4
+
+      - name: Verify complete SHA-256 manifest
+        shell: bash
+        run: |
+          sha256sum -c SHA256SUMS.txt
+
+      - name: Re-run independent audit
+        shell: bash
+        run: |
+          python NO18_THIRD_DIAGONAL_VERIFY_V3.py | tee /tmp/no18_verify.txt
+          grep -q '"failures": 0' /tmp/no18_verify.txt
+          grep -q '"all_pass": true' /tmp/no18_verify.txt
+
+      - name: Create draft release if absent
+        env:
+          GH_TOKEN: \${{ github.token }}
+        shell: bash
+        run: |
+          if gh release view v1.0.0 >/dev/null 2>&1; then
+            echo "Release v1.0.0 already exists; leaving it unchanged."
+            exit 0
+          fi
+          gh release create v1.0.0 \
+            --draft \
+            --target "$GITHUB_SHA" \
+            --title "No.18 v1.0.0" \
+            --notes-file RELEASE_NOTES_v1.0.0.md \
+            Yonezu_2026_No18_Third_Diagonal.pdf \
+            SHA256SUMS.txt \
+            VERIFICATION_OUTPUT.txt \
+            NO18_AUDIT_FULL.json
