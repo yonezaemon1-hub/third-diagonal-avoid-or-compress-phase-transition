@@ -66,6 +66,10 @@ python NO18_THIRD_DIAGONAL_VERIFY_V3.py --json NO18_AUDIT_FULL.json
 
 The theorem is proved analytically in the paper. The finite computation is reproducibility support and independently checks the constructions and synchronization identities; it is not used as a substitute for the proof.
 
+## Archival release
+
+Zenodo Software DOI: `10.5281/zenodo.22907313`
+
 ## Version
 
 Prepared as a release candidate on 22 September 2026. The No.17 companion citation was updated on 23 September 2026 to its Zenodo Software DOI: `10.5281/zenodo.22907153`.
