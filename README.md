@@ -68,4 +68,4 @@ The theorem is proved analytically in the paper. The finite computation is repro
 
 ## Version
 
-Prepared as a release candidate on 22 September 2026. The No.17 companion citation is currently linked to its GitHub v1.0.0 release and should be updated with its archival DOI when Zenodo ingestion completes.
+Prepared as a release candidate on 22 September 2026. The No.17 companion citation was updated on 23 September 2026 to its Zenodo Software DOI: `10.5281/zenodo.22907153`.
