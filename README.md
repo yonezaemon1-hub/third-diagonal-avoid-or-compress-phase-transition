@@ -73,3 +73,7 @@ Zenodo Software DOI: `10.5281/zenodo.22907313`
 ## Version
 
 Prepared as a release candidate on 22 September 2026. The No.17 companion citation was updated on 23 September 2026 to its Zenodo Software DOI: `10.5281/zenodo.22907153`.
+
+## Research inquiries
+
+For questions about this research, reproduction, or collaboration, contact Yonezu Research Lab: [yonezaemon1+research@gmail.com](mailto:yonezaemon1+research@gmail.com).
